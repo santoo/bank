@@ -5,21 +5,13 @@
     <title>Title</title>
     <link type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <style>
-        .forum-add{
-            margin: auto;
-        }
-        label {
-            color: #afc3bd;
-        }
-        .read-only {
-            color: #47b70f;
-        }
-    </style>
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/app.js"></script>
 </head>
 <body>
-<button class="btn btn-info">Hello</button>
-    <div>
+<center><h3>ABC Bank</h3></center>
+    <div class="nav_bar">
         <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Same Bank</a>
@@ -28,14 +20,11 @@
                 <a class="nav-link" href="#">Other Bank</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link" href="#">UPI</a>
             </li>
         </ul>
     </div>
-<div class="col-6 forum-add" style="padding-top: 40px">
+<div class="col-6 forum-add" style="padding-top: 40px;display: block">
     <div class="form-label-group">
         <label for="acc_no">Account Number</label>
         <input id="acc_no" class="form-control" placeholder="Account Number" required="" autofocus="" type="number">
@@ -57,25 +46,56 @@
 
     </div>
     <div class="form-label-group">
-        <label for="acc">Account Number</label><br>
+        <label for="acc">Account Number</label>
         <span class="read-only">12345678</span>
 
     </div>
     <br>
     <div class="form-label-group">
-        <button class="btn btn-info">Cancel</button>
+        <button class="btn btn-info" onclick="location.reload()">Cancel</button>
         <button class="btn btn-info" style="float: right" onclick="goNext()">Next</button>
     </div>
 
 </div>
-<script>
-    function goNext(){
-        $.ajax({
-            url: "url",
-            success: function(result){
+<div class="col-6 forum-pre-confirm" style="padding-top: 40px;display: none">
+    <center> <h4>Pre Confirmation</h4></center>
+    <table class="table table-active">
+        <tr>
+            <th>Account Number</th>
+            <td id="acc_number_tab"></td>
+        </tr>
+        <tr>
+            <th>Account Holder</th>
+            <td id="acc_hodr_tab"></td>
+        </tr>
+        <tr>
+            <th>Phone Number</th>
+            <td id="ph_no_tab"></td>
+        </tr>
+        <tr>
+            <th>Bank Name</th>
+            <td id="bank_name_tab"></td>
+        </tr>
+        <tr>
+            <th>Branch Name</th>
+            <td id="branch_name_tab"></td>
+        </tr>
+    </table>
+    <div class="form-label-group">
+        <button class="btn btn-info" onclick="location.reload()">Cancel</button>
+        <button class="btn btn-info" style="float: right" onclick="confirm()">Submit</button>
+    </div>
 
-        }});
-    }
-</script>
+</div>
+<div class="col-6 forum-confirm" style="padding-top: 40px;display: none">
+    <center> <h4>Confirmation</h4></center>
+   <center> <img src="img/succ.png" alt="" style="width: 50%"></center>
+    <div class="form-label-group">
+        <center><a href="index.html">Go Home</a></center>
+       
+    </div>
+
+</div>
+
 </body>
 </html>

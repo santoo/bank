@@ -1,0 +1,10 @@
+
+.forum-add,.forum-pre-confirm,.forum-confirm{
+    margin: auto;
+}
+label {
+    color: #afc3bd;
+}
+.read-only {
+    color: #47b70f;
+}
