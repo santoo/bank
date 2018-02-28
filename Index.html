@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .forum-add{
+            margin: auto;
+        }
+        label {
+            color: #afc3bd;
+        }
+        .read-only {
+            color: #47b70f;
+        }
+    </style>
+</head>
+<body>
+<button class="btn btn-info">Hello</button>
+    <div>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Same Bank</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Other Bank</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </div>
+<div class="col-6 forum-add" style="padding-top: 40px">
+    <div class="form-label-group">
+        <label for="acc_no">Account Number</label>
+        <input id="acc_no" class="form-control" placeholder="Account Number" required="" autofocus="" type="number">
+    </div>
+    <br>
+    <center>or</center>
+    <br>
+    <div class="form-label-group">
+        <label for="mobile">Phone Number</label>
+        <input id="mobile" class="form-control" placeholder="Phone Number" required="" autofocus="" type="number">
+    </div>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <div class="form-label-group">
+        <label for="name">Account Holder Name</label>
+        <span class="read-only">Santhoshkumar</span>
+
+    </div>
+    <div class="form-label-group">
+        <label for="acc">Account Number</label><br>
+        <span class="read-only">12345678</span>
+
+    </div>
+    <br>
+    <div class="form-label-group">
+        <button class="btn btn-info">Cancel</button>
+        <button class="btn btn-info" style="float: right" onclick="goNext()">Next</button>
+    </div>
+
+</div>
+<script>
+    function goNext(){
+        $.ajax({
+            url: "url",
+            success: function(result){
+
+        }});
+    }
+</script>
+</body>
+</html>
